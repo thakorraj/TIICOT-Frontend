@@ -1,0 +1,46 @@
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+
+  <!-- Position Column -->
+  <!-- <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container> -->
+
+  <!-- Name Column -->
+  <!-- <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.firstname}} </td>
+  </ng-container> -->
+
+  <!-- Weight Column -->
+  <!-- <ng-container matColumnDef="weight">
+    <th mat-header-cell *matHeaderCellDef> Weight </th>
+    <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
+  </ng-container> -->
+
+
+  <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> --> 
+<!-- <label for="search-text">Search Text</label>
+      <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+        [(ngModel)]="searchText" placeholder="Enter text to search" 
+        autofocus> -->
+    
+        <div class="form-group">
+          <input type="text" class="in" placeholder="Search Here" [(ngModel)]="term" >
+      </div>
+<table>
+  <tr>
+    <td>Id</td>
+    <td>First Name</td>
+    <td>Last Name</td>
+  </tr>
+  <tr *ngFor="let item of client | filter:term">
+    <td>{{item.id}}</td>
+    <td>{{item.firstname}}</td>
+    <td>{{item.lastname}}</td>
+  </tr>
+</table>
